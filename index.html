@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Образовательный сайт по химии</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Образовательный сайт по химии</h1>
+  </header>
+
+  <main>
+    <!-- Главная страница с темами -->
+    <section id="home-page" class="active">
+      <h2>Выберите тему</h2>
+      <div class="topics-container">
+        <div class="topic-card" data-topic="proteins">
+          <img src="https://bcdn.products.pcc.eu/wp-content/uploads/2023/06/miniatura-bialka.png" alt="Белки" />
+          <h3>Белки</h3>
+          <p>Основные понятия и строение белков</p>
+          <button class="btn-open-topic">Перейти</button>
+        </div>
+        <div class="topic-card" data-topic="equilibrium">
+          <img src="https://umschool.net/library/wp-content/uploads/2022/04/3_logo-7.png" alt="Химическое равновесие" />
+          <h3>Химическое равновесие</h3>
+          <p>Принципы и закономерности химического равновесия</p>
+          <button class="btn-open-topic">Перейти</button>
+        </div>
+        <div class="topic-card" data-topic="redox">
+          <img src="https://lh3.googleusercontent.com/proxy/Mu8gXVkS4OCbKJHJ1dGDDr0pH0oDuC54hFLjOD7GrZ8m7u2ZbuhCGNSq1910s2Ci-eYx6EC3" alt="Окислительно-восстановительные реакции" />
+          <h3>Окислительно-восстановительные реакции</h3>
+          <p>Основы и примеры ОВР</p>
+          <button class="btn-open-topic">Перейти</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Страница выбранной темы -->
+    <section id="topic-page" class="hidden">
+      <button id="btn-back-home" class="btn-back">← Назад</button>
+      <h2 id="topic-title"></h2>
+
+      <nav class="topic-tabs">
+        <button class="topic-tab-btn active" data-tab="tab-theory">Теория</button>
+        <button class="topic-tab-btn" data-tab="tab-video">Видео</button>
+        <button class="topic-tab-btn" data-tab="tab-chat">Чат</button>
+      </nav>
+
+      <div id="tab-theory" class="topic-tab-content active"></div>
+      <div id="tab-video" class="topic-tab-content"></div>
+      <div id="tab-chat" class="topic-tab-content">
+        <div id="chat-messages" class="chat-messages"></div>
+        <div class="chat-input-container">
+          <input type="text" id="chat-input" placeholder="Задайте вопрос по теме..." />
+          <button id="chat-send-btn">Отправить</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Полатбек Ақнұр, ПО2403 </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
